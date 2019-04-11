@@ -1,0 +1,7 @@
+easy_admin:
+    entities:
+        TipoDocumento:
+            class: App\Entity\TipoDocumento
+            form:
+                fields:
+                    - descripcion

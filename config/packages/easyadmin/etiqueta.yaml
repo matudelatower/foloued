@@ -1,0 +1,9 @@
+easy_admin:
+    entities:
+        Etiqueta:
+            class: App\Entity\Etiqueta
+            form:
+                fields:
+                    - nombre
+                    - descripcion
+                    - padre

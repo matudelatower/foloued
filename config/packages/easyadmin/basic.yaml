@@ -1,0 +1,22 @@
+easy_admin:
+    disabled_actions: ['delete']
+    site_name: 'FOLOUED'
+    show:
+        max_results: 20
+    list:
+        actions:
+          - { name: 'show', icon: 'eye', label: '' }
+          - { name: 'edit', icon: 'pencil', label: '' }
+    #            - { name: 'delete', icon: 'trash', label: '' }
+
+    design:
+        brand_color: '#000'
+#        form_theme: ['horizontal']
+        menu:
+#          - { label: 'Administración', route: 'administrador' }
+          - { label: 'Usuarios', entity: Usuario }
+          - { label: 'Personas', entity: Persona }
+          - { label: 'Tipos de Documentos', entity: TipoDocumento }
+          - { label: 'Etiquetas', entity: Etiqueta }
+        assets:
+#            favicon: 'bundles/app/img/favicon.png'

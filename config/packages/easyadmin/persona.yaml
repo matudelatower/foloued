@@ -1,0 +1,31 @@
+easy_admin:
+    entities:
+        Persona:
+            class: App\Entity\Persona
+            list:
+                fields:
+                  - nombre
+                  - apellido
+                  - dni
+                  - { property: 'fotoPerfil', type: 'image', base_path: '%app.path.foto_perfil%' }
+                  - etiqueta
+            form:
+                fields:
+                  - { type: 'group', columns: 6, label: 'Datos Personales' }
+                  - { property: 'fotoPerfilFile', type: 'vich_image', type_options: { required: true } }
+                  - nombre
+                  - apellido
+                  - tipoDocumento
+                  - { property: 'dni', type: 'text', type_options: { label: 'Número Documento' } }
+                  - { property: 'fechaNacimiento', type_options: { widget: 'single_text', html5: true } }
+                  - etiqueta
+                  - { type: 'group', columns: 6, label: 'Datos de Contacto', icon: 'phone' }
+                  - { property: 'personaContactos', type: 'collection',
+                      type_options: {
+                        entry_type: App\Form\PersonaContactoType,
+                        label: 'Contacto',
+                        allow_add: true,
+                        allow_delete: true,
+                        by_reference: false
+                      }
+                    }
