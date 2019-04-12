@@ -4,4 +4,10 @@
 
 {% block body %}
     <h1>Foloued en Construcción</h1>
+
+    {% if app.user %}
+    <div>
+        <a href="{{ path('fos_user_security_logout') }}">Cerrar Sesión</a>
+    </div>
+    {% endif %}
 {% endblock %}
