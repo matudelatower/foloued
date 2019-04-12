@@ -12,7 +12,7 @@ easy_admin:
             form:
                 fields:
                   - { type: 'group', columns: 6, label: 'Datos Personales' }
-                  - { property: 'fotoPerfilFile', type: 'vich_image', type_options: { required: true } }
+                  - { property: 'fotoPerfilFile', type: 'vich_image' }
                   - nombre
                   - apellido
                   - tipoDocumento
@@ -26,6 +26,7 @@ easy_admin:
                         label: 'Contacto',
                         allow_add: true,
                         allow_delete: true,
-                        by_reference: false
+                        by_reference: false,
+                        required: true
                       }
                     }
